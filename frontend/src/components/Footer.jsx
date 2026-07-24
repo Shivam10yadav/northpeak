@@ -70,8 +70,6 @@ const Footer = () => {
             <p className="max-w-sm text-xs leading-relaxed text-neutral-600 sm:text-sm">
               Engineering high-performance web applications, modern interactive interfaces, and custom digital solutions for ambitious brands.
             </p>
-
-       
           </div>
 
           {/* Navigation Links Column */}
@@ -140,11 +138,24 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 sm:flex-row">
-          <p className="text-[11px] text-neutral-500">
-            © {new Date().getFullYear()} NorthPeak Digital. All rights reserved.
-          </p>
+        {/* Bottom Bar with Mandatory Credit Line */}
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 md:flex-row">
+          <div className="flex flex-col items-center gap-1.5 md:items-start">
+            <p className="text-[11px] text-neutral-500">
+              © {new Date().getFullYear()} NorthPeak Digital. All rights reserved.
+            </p>
+            <p className="text-[11px] font-medium text-neutral-600">
+              Built for Digital Heroes Training Task ·{" "}
+              <a
+                href="https://digitalheroesco.com"
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-neutral-950 underline underline-offset-2 transition-colors hover:text-amber-600"
+              >
+                Digital Heroes
+              </a>
+            </p>
+          </div>
 
           {/* Social Icons */}
           <div className="flex items-center gap-3">
