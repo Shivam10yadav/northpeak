@@ -35,7 +35,6 @@ const Footer = () => {
     <footer id="footer" className="w-full border-t border-neutral-200 bg-white px-4 pb-8 pt-16 text-neutral-950 sm:px-8 md:px-12 lg:px-16">
       <div className="mx-auto max-w-7xl">
         
-        {/* Top CTA Banner */}
         <div className="flex flex-col gap-6 rounded-2xl border border-neutral-200 bg-neutral-50 p-8 md:flex-row md:items-center md:justify-between">
           <div>
          
@@ -56,7 +55,6 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Main Footer Links Grid */}
         <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-12">
           
           {/* Brand Info */}
@@ -88,7 +86,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Capabilities Column */}
           <div className="md:col-span-3">
             <h4 className="text-xs font-bold uppercase tracking-widest text-neutral-950">
               Services
@@ -107,7 +104,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter Box */}
           <div className="md:col-span-3">
             <h4 className="text-xs font-bold uppercase tracking-widest text-neutral-950">
               Stay Updated
@@ -130,7 +126,6 @@ const Footer = () => {
                   className="w-full rounded-xl border border-neutral-300 bg-neutral-50 px-3.5 py-2.5 text-xs text-neutral-950 placeholder-neutral-500 outline-none transition-colors focus:border-neutral-950"
                 />
               </div>
-              {/* Was icon-only with no accessible name — added aria-label */}
               <button
                 type="submit"
                 aria-label="Subscribe to newsletter"
@@ -143,7 +138,6 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar with Mandatory Credit Line */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 md:flex-row">
           <div className="flex flex-col items-center gap-1.5 md:items-start">
             <p className="text-[11px] text-neutral-500">
@@ -162,7 +156,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Social Icons */}
           <div className="flex items-center gap-3">
             {navLinks.socials.map((social, idx) => {
               const Icon = social.icon;

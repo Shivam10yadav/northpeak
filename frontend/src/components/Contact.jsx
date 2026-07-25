@@ -66,7 +66,6 @@ const Contact = () => {
 
     setIsSubmitting(true);
 
-    // Simulate API call delay
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -80,7 +79,6 @@ const Contact = () => {
       className="w-full bg-zinc-950 px-4 py-20 text-white sm:px-8 md:px-12 lg:px-16"
     >
       <div className="mx-auto max-w-7xl">
-        {/* Header Block */}
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between border-b border-zinc-800 pb-8">
           <div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
@@ -94,7 +92,6 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* Form & Info Grid */}
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12">
           <div className="space-y-8 lg:col-span-5">
             <div>
@@ -157,7 +154,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Quick Status Tag */}
             <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4 backdrop-blur-sm">
               <p className="text-xs font-semibold text-emerald-400">
                 Currently accepting new projects for Q3/Q4.
@@ -197,7 +193,6 @@ const Contact = () => {
                   noValidate
                   aria-label="Project inquiry form"
                 >
-                  {/* Name Input */}
                   <div>
                     <label
                       htmlFor="name"
@@ -274,10 +269,7 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      {/* This label was previously pointing to htmlFor="message",
-                          which mismatched both its own id (missing) and its
-                          actual purpose (it labels the budget select, not
-                          "Project Details" and not the message textarea). */}
+                  
                       <label
                         htmlFor="budget"
                         className="block text-xs font-semibold uppercase tracking-wider text-zinc-300"
@@ -337,7 +329,6 @@ const Contact = () => {
                     )}
                   </div>
 
-                  {/* Submit Button */}
                   <button
                     type="submit"
                     disabled={isSubmitting}

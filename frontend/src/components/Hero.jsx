@@ -20,7 +20,6 @@ const Hero = () => {
       {/* Card Container */}
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-2xl p-6 sm:p-8 md:rounded-[2.5rem] md:p-10">
 
-        {/* Background Video Visual — decorative only, hidden from assistive tech */}
         <video
           autoPlay
           loop
@@ -34,21 +33,20 @@ const Hero = () => {
 
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
 
-        {/* Mounted Navbar Component */}
         <Navbar />
-
-        <div className="relative z-10 my-auto grid grid-cols-3 gap-4 max-w-2xl mx-auto w-full border border-white/20 bg-black/30 p-4 rounded-2xl backdrop-blur-md">
-          {metrics.map((metric, i) => (
-            <div key={i} className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-                {metric.value}
-              </p>
-              <p className="text-[10px] sm:text-xs uppercase tracking-wider text-white/80 font-semibold mt-0.5">
-                {metric.label}
-              </p>
-            </div>
-          ))}
-        </div>
+ 
+ <div className="relative z-10 my-auto grid grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto w-full border border-white/20 bg-black/30 p-3 sm:p-4 rounded-2xl backdrop-blur-md">
+  {metrics.map((metric, i) => (
+    <div key={i} className="text-center">
+      <p className="text-base sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-tight">
+        {metric.value}
+      </p>
+      <p className="text-[9px] sm:text-xs uppercase tracking-wider text-white/80 font-semibold mt-0.5 leading-snug">
+        {metric.label}
+      </p>
+    </div>
+  ))}
+</div>
 
         <footer className="relative z-10 border-t border-white/20 pt-6">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:items-end">
