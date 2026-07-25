@@ -128,7 +128,6 @@ const Pricing = () => {
                 </ul>
               </div>
 
-              {/* CTA Button */}
               <div className="mt-10">
                 <a
                   href="#contact"

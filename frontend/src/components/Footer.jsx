@@ -57,7 +57,6 @@ const Footer = () => {
 
         <div className="mt-16 grid grid-cols-1 gap-10 md:grid-cols-12">
           
-          {/* Brand Info */}
           <div className="space-y-4 md:col-span-4">
             <a href="#" className="text-2xl font-extrabold tracking-wider text-neutral-950">
               NORTHPEAK<span className="text-amber-500" aria-hidden="true">.</span>
@@ -67,7 +66,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Navigation Links Column */}
           <div className="md:col-span-2">
             <h4 className="text-xs font-bold uppercase tracking-widest text-neutral-950">
               Navigation

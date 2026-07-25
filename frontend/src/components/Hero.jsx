@@ -17,7 +17,7 @@ const highlights = [
 const Hero = () => {
   return (
     <section className="h-screen w-full bg-white p-2 sm:p-3 md:p-4">
-      {/* Card Container */}
+      
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-2xl p-6 sm:p-8 md:rounded-[2.5rem] md:p-10">
 
         <video
@@ -53,8 +53,6 @@ const Hero = () => {
             
             <div className="space-y-3 md:col-span-7 lg:col-span-6">
               
-           
-
               <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
                 NorthPeak Digital
               </h1>

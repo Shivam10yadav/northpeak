@@ -36,7 +36,6 @@ const Testimonials = () => {
     <section id="testimonials" className="w-full bg-zinc-950 px-4 py-20 text-white sm:px-8 md:px-12 lg:px-16">
       <div className="mx-auto max-w-7xl">
         
-        {/* Header Block */}
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between border-b border-zinc-800 pb-8">
           <div>
        
@@ -78,7 +77,6 @@ const Testimonials = () => {
                 </p>
               </div>
 
-              {/* Author Footer */}
               <div className="mt-8 border-t border-zinc-800/80 pt-4">
                 <div className="flex items-center gap-3">
                   <img
@@ -87,8 +85,7 @@ const Testimonials = () => {
                     className="h-10 w-10 rounded-full object-cover border border-zinc-700"
                   />
                   <div>
-                    {/* Was h4, skipping straight from this section's h2 —
-                        bumped to h3 to keep the outline sequential */}
+                
                     <h3 className="text-xs font-bold uppercase tracking-wider text-white">
                       {item.author}
                     </h3>
