@@ -3,13 +3,17 @@ import { ArrowUpRight, Play, Sparkles } from "lucide-react";
 import Navbar from "./Navbar";
 
 const metrics = [
-  { value: "150+", label: "Projects Delivered" },
-  { value: "99.8%", label: "Client Satisfaction" },
-  { value: "10x", label: "Average Growth" },
+  { value: "Modern", label: "Design System" },
+  { value: "Responsive", label: "Every Device" },
+  { value: "SEO", label: "Optimized" },
 ];
 
-const clientLogos = ["ACME Corp", "Vortex AI", "Aura Luxury", "Nexus Tech"];
-
+const highlights = [
+  "UI Design",
+  "Brand Identity",
+  "Development",
+  "Strategy",
+];
 const Hero = () => {
   return (
     <section className="h-screen w-full bg-white p-2 sm:p-3 md:p-4">
@@ -54,17 +58,18 @@ const Hero = () => {
               <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
                 NorthPeak Digital
               </h1>
-              
-              <p className="max-w-lg text-xs leading-relaxed text-white/90 sm:text-sm md:text-base">
-                We partner with ambitious businesses to create high-performance
-                websites and digital experiences that inspire growth, build trust,
-                and help brands reach their next peak.
-              </p>
+
+         <p className="max-w-lg text-xs leading-relaxed text-white/90 sm:text-sm md:text-base">
+  NorthPeak Digital builds websites that feel fast, look refined,
+  and help businesses leave a memorable first impression.
+  Every project is designed with performance, accessibility,
+  and long-term growth in mind.
+</p>
 
               <div className="pt-2 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-wider text-white/70">
                 <span>Trusted by:</span>
                 <div className="flex flex-wrap gap-3">
-                  {clientLogos.map((logo, idx) => (
+                  {highlights.map((logo, idx) => (
                     <span key={idx} className="text-white border-b border-white/20 pb-0.5">
                       {logo}
                     </span>
@@ -80,14 +85,14 @@ const Hero = () => {
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-black/30 px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md transition-all hover:bg-white/10 sm:text-sm"
               >
                 <Play className="h-3.5 w-3.5 fill-current" />
-                View Showcase
+                Explore Our Work
               </a>
 
               <a
                 href="#contact"
                 className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-black transition-all hover:bg-neutral-200 sm:text-sm"
               >
-                Start Your Project
+                 Let's Build Together
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </div>

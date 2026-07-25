@@ -13,50 +13,50 @@ import {
 const services = [
   {
     number: "01",
-    title: "Web Architecture",
+    title: "Website Development",
     description:
-      "Scalable web apps built with modern stacks (React, Vite, Node). Engineered for speed, reliability, and precision.",
-    tags: ["React", "Vite", "Node.js"],
+      "We build fast, modern websites that work smoothly on all devices and are easy to manage.",
+    tags: ["React", "Node.js", "Vite"],
     icon: Code2,
   },
   {
     number: "02",
-    title: "UI/UX & Product Design",
+    title: "UI & Design",
     description:
-      "Minimal, glassmorphic interfaces designed to maximize brand presence and user engagement across devices.",
-    tags: ["Design Systems", "Figma"],
+      "Clean and simple designs that help people find what they need and enjoy using your website.",
+    tags: ["Figma", "UI Design"],
     icon: Layout,
   },
   {
     number: "03",
-    title: "AI Integration",
+    title: "AI Features",
     description:
-      "Embedding cutting-edge AI models, automated workflows, and smart features directly into existing web apps.",
-    tags: ["Gemini API", "Automation"],
+      "Add AI tools like chatbots, content generation, or smart search to make your website more useful.",
+    tags: ["AI", "Automation"],
     icon: Cpu,
   },
   {
     number: "04",
-    title: "Responsive Web Apps",
+    title: "Responsive Websites",
     description:
-      "Cross-platform digital experiences engineered for mobile, desktop, and tablet with high frame-rate performance.",
-    tags: ["PWA", "Mobile-First"],
+      "Your website will look and work great on phones, tablets, laptops, and desktops.",
+    tags: ["Mobile First", "Responsive"],
     icon: Smartphone,
   },
   {
     number: "05",
-    title: "Performance & SEO",
+    title: "Speed & SEO",
     description:
-      "Core Web Vitals optimization, automated asset delivery, and technical SEO structure for high search visibility.",
-    tags: ["PageSpeed", "SEO Struct"],
+      "We improve website speed and help your pages perform better on search engines.",
+    tags: ["Performance", "SEO"],
     icon: Zap,
   },
   {
     number: "06",
-    title: "E-Commerce & SaaS",
+    title: "Business & SaaS Websites",
     description:
-      "High-converting storefronts and SaaS platforms with secure payment integrations and streamlined user flows.",
-    tags: ["Stripe", "SaaS Systems"],
+      "We create business websites and web apps that are simple, secure, and ready to grow.",
+    tags: ["SaaS", "Business"],
     icon: ShoppingBag,
   },
 ];
