@@ -58,11 +58,12 @@ const Testimonials = () => {
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1" role="img" aria-label="5 out of 5 stars">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
                         className="h-3.5 w-3.5 fill-amber-400 text-amber-400"
+                        aria-hidden="true"
                       />
                     ))}
                   </div>
@@ -86,9 +87,11 @@ const Testimonials = () => {
                     className="h-10 w-10 rounded-full object-cover border border-zinc-700"
                   />
                   <div>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+                    {/* Was h4, skipping straight from this section's h2 —
+                        bumped to h3 to keep the outline sequential */}
+                    <h3 className="text-xs font-bold uppercase tracking-wider text-white">
                       {item.author}
-                    </h4>
+                    </h3>
                     <p className="text-[11px] text-zinc-400">
                       {item.role} · <span className="text-zinc-300">{item.company}</span>
                     </p>

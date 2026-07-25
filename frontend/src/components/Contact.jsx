@@ -110,7 +110,7 @@ const Contact = () => {
             <div className="space-y-6 border-t border-zinc-800/80 pt-6">
               <div className="flex items-center gap-4">
                 <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-3 text-amber-400">
-                  <Mail className="h-5 w-5" />
+                  <Mail className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
@@ -127,21 +127,24 @@ const Contact = () => {
 
               <div className="flex items-center gap-4">
                 <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-3 text-amber-400">
-                  <Phone className="h-5 w-5" />
+                  <Phone className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
                     Call / WhatsApp
                   </p>
-                  <p className="text-sm font-medium text-white">
+                  <a
+                    href="tel:+919876543210"
+                    className="text-sm font-medium text-white hover:text-amber-400"
+                  >
                     +91 98765 43210
-                  </p>
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
                 <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-3 text-amber-400">
-                  <MapPin className="h-5 w-5" />
+                  <MapPin className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
@@ -165,8 +168,14 @@ const Contact = () => {
           <div className="lg:col-span-7">
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 sm:p-8 backdrop-blur-sm">
               {isSubmitted ? (
-                <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <CheckCircle2 className="h-14 w-14 text-emerald-400" />
+                <div
+                  className="flex flex-col items-center justify-center py-12 text-center"
+                  role="status"
+                >
+                  <CheckCircle2
+                    className="h-14 w-14 text-emerald-400"
+                    aria-hidden="true"
+                  />
                   <h3 className="mt-4 text-2xl font-bold text-white">
                     Message Sent!
                   </h3>
@@ -182,22 +191,32 @@ const Contact = () => {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-6"
+                  noValidate
+                  aria-label="Project inquiry form"
+                >
                   {/* Name Input */}
                   <div>
                     <label
                       htmlFor="name"
                       className="block text-xs font-semibold uppercase tracking-wider text-zinc-300"
                     >
-                      Your Name <span className="text-amber-400">*</span>
+                      Your Name <span className="text-amber-400" aria-hidden="true">*</span>
                     </label>
 
                     <input
                       type="text"
+                      id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Rahul Verma"
+                      required
+                      aria-required="true"
+                      aria-invalid={!!errors.name}
+                      aria-describedby={errors.name ? "name-error" : undefined}
                       className={`mt-2 w-full rounded-xl border bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors ${
                         errors.name
                           ? "border-red-500/80 focus:border-red-500"
@@ -205,8 +224,12 @@ const Contact = () => {
                       }`}
                     />
                     {errors.name && (
-                      <p className="mt-1.5 flex items-center gap-1 text-xs text-red-400">
-                        <AlertCircle className="h-3.5 w-3.5" />
+                      <p
+                        id="name-error"
+                        role="alert"
+                        className="mt-1.5 flex items-center gap-1 text-xs text-red-400"
+                      >
+                        <AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />
                         {errors.name}
                       </p>
                     )}
@@ -218,15 +241,20 @@ const Contact = () => {
                         htmlFor="email"
                         className="block text-xs font-semibold uppercase tracking-wider text-zinc-300"
                       >
-                        Email Address <span className="text-amber-400">*</span>
+                        Email Address <span className="text-amber-400" aria-hidden="true">*</span>
                       </label>
 
                       <input
                         type="email"
+                        id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="rahul@company.com"
+                        required
+                        aria-required="true"
+                        aria-invalid={!!errors.email}
+                        aria-describedby={errors.email ? "email-error" : undefined}
                         className={`mt-2 w-full rounded-xl border bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors ${
                           errors.email
                             ? "border-red-500/80 focus:border-red-500"
@@ -234,20 +262,27 @@ const Contact = () => {
                         }`}
                       />
                       {errors.email && (
-                        <p className="mt-1.5 flex items-center gap-1 text-xs text-red-400">
-                          <AlertCircle className="h-3.5 w-3.5" />
+                        <p
+                          id="email-error"
+                          role="alert"
+                          className="mt-1.5 flex items-center gap-1 text-xs text-red-400"
+                        >
+                          <AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />
                           {errors.email}
                         </p>
                       )}
                     </div>
 
                     <div>
+                      {/* This label was previously pointing to htmlFor="message",
+                          which mismatched both its own id (missing) and its
+                          actual purpose (it labels the budget select, not
+                          "Project Details" and not the message textarea). */}
                       <label
-                        htmlFor="message"
+                        htmlFor="budget"
                         className="block text-xs font-semibold uppercase tracking-wider text-zinc-300"
                       >
-                        Project Details{" "}
-                        <span className="text-amber-400">*</span>
+                        Budget Range
                       </label>
 
                       <select
@@ -267,15 +302,23 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300">
-                      Project Details <span className="text-amber-400">*</span>
+                    <label
+                      htmlFor="message"
+                      className="block text-xs font-semibold uppercase tracking-wider text-zinc-300"
+                    >
+                      Project Details <span className="text-amber-400" aria-hidden="true">*</span>
                     </label>
                     <textarea
+                      id="message"
                       name="message"
                       rows="4"
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Tell us briefly about what you want to build..."
+                      required
+                      aria-required="true"
+                      aria-invalid={!!errors.message}
+                      aria-describedby={errors.message ? "message-error" : undefined}
                       className={`mt-2 w-full rounded-xl border bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors ${
                         errors.message
                           ? "border-red-500/80 focus:border-red-500"
@@ -283,8 +326,12 @@ const Contact = () => {
                       }`}
                     />
                     {errors.message && (
-                      <p className="mt-1.5 flex items-center gap-1 text-xs text-red-400">
-                        <AlertCircle className="h-3.5 w-3.5" />
+                      <p
+                        id="message-error"
+                        role="alert"
+                        className="mt-1.5 flex items-center gap-1 text-xs text-red-400"
+                      >
+                        <AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />
                         {errors.message}
                       </p>
                     )}
@@ -294,6 +341,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
+                    aria-busy={isSubmitting}
                     className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-amber-400 py-3.5 text-xs font-extrabold uppercase tracking-wider text-zinc-950 transition-all hover:bg-amber-300 disabled:opacity-50"
                   >
                     {isSubmitting ? (
@@ -301,7 +349,10 @@ const Contact = () => {
                     ) : (
                       <>
                         Send Inquiry
-                        <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <Send
+                          className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                          aria-hidden="true"
+                        />
                       </>
                     )}
                   </button>

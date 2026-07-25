@@ -52,7 +52,7 @@ const Footer = () => {
             className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-neutral-950 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-neutral-800"
           >
             Schedule a Call
-            <FaArrowUpRightFromSquare className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <FaArrowUpRightFromSquare className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
           </a>
         </div>
 
@@ -62,7 +62,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="space-y-4 md:col-span-4">
             <a href="#" className="text-2xl font-extrabold tracking-wider text-neutral-950">
-              NORTHPEAK<span className="text-amber-500">.</span>
+              NORTHPEAK<span className="text-amber-500" aria-hidden="true">.</span>
             </a>
             <p className="max-w-sm text-xs leading-relaxed text-neutral-600 sm:text-sm">
               Engineering high-performance web applications, modern interactive interfaces, and custom digital solutions for ambitious brands.
@@ -112,23 +112,31 @@ const Footer = () => {
             <h4 className="text-xs font-bold uppercase tracking-widest text-neutral-950">
               Stay Updated
             </h4>
-            <p className="mt-2 text-xs text-neutral-600">
+            <p className="mt-2 text-xs text-neutral-600" id="newsletter-desc">
               Get occasional insights on web tech, UI patterns, and project releases.
             </p>
 
             <form onSubmit={(e) => e.preventDefault()} className="mt-4 flex items-center gap-2">
               <div className="relative w-full">
+                <label htmlFor="newsletter-email" className="sr-only">
+                  Email address
+                </label>
                 <input
                   type="email"
+                  id="newsletter-email"
+                  name="newsletter-email"
                   placeholder="Enter email"
+                  aria-describedby="newsletter-desc"
                   className="w-full rounded-xl border border-neutral-300 bg-neutral-50 px-3.5 py-2.5 text-xs text-neutral-950 placeholder-neutral-500 outline-none transition-colors focus:border-neutral-950"
                 />
               </div>
+              {/* Was icon-only with no accessible name — added aria-label */}
               <button
                 type="submit"
+                aria-label="Subscribe to newsletter"
                 className="shrink-0 rounded-xl bg-neutral-950 p-3 text-white transition-colors hover:bg-neutral-800"
               >
-                <FaEnvelope className="h-3.5 w-3.5" />
+                <FaEnvelope className="h-3.5 w-3.5" aria-hidden="true" />
               </button>
             </form>
           </div>
@@ -167,7 +175,7 @@ const Footer = () => {
                   className="rounded-lg border border-neutral-200 bg-neutral-50 p-2.5 text-neutral-600 transition-colors hover:border-neutral-400 hover:text-neutral-950"
                   aria-label={social.name}
                 >
-                  <Icon className="h-4 w-4" />
+                  <Icon className="h-4 w-4" aria-hidden="true" />
                 </a>
               );
             })}

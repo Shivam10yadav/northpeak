@@ -118,7 +118,7 @@ const Pricing = () => {
                             : "bg-neutral-200/80 text-neutral-900"
                         }`}
                       >
-                        <Check className="h-3 w-3 stroke-[3]" />
+                        <Check className="h-3 w-3 stroke-[3]" aria-hidden="true" />
                       </div>
                       <span className={plan.popular ? "text-neutral-200" : "text-neutral-700"}>
                         {feature}
@@ -139,7 +139,7 @@ const Pricing = () => {
                   }`}
                 >
                   {plan.buttonText}
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                 </a>
               </div>
             </div>

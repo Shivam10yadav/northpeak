@@ -20,12 +20,14 @@ const Hero = () => {
       {/* Card Container */}
       <div className="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-2xl p-6 sm:p-8 md:rounded-[2.5rem] md:p-10">
 
-        {/* Background Video Visual */}
+        {/* Background Video Visual — decorative only, hidden from assistive tech */}
         <video
           autoPlay
           loop
           muted
           playsInline
+          aria-hidden="true"
+          tabIndex={-1}
           className="absolute inset-0 h-full w-full object-cover"
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4"
         />
@@ -84,7 +86,7 @@ const Hero = () => {
                 href="#services"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-black/30 px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md transition-all hover:bg-white/10 sm:text-sm"
               >
-                <Play className="h-3.5 w-3.5 fill-current" />
+                <Play className="h-3.5 w-3.5 fill-current" aria-hidden="true" />
                 Explore Our Work
               </a>
 
@@ -93,7 +95,7 @@ const Hero = () => {
                 className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-black transition-all hover:bg-neutral-200 sm:text-sm"
               >
                  Let's Build Together
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
               </a>
             </div>
 

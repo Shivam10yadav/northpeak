@@ -93,7 +93,7 @@ const Services = () => {
                       [{service.number}]
                     </span>
                     <div className="rounded-full border border-neutral-200 bg-white p-2.5 text-neutral-900 transition-colors group-hover:border-neutral-800 group-hover:bg-neutral-900 group-hover:text-white">
-                      <Icon className="h-4 w-4" />
+                      <Icon className="h-4 w-4" aria-hidden="true" />
                     </div>
                   </div>
 
@@ -123,7 +123,7 @@ const Services = () => {
                       className="inline-flex items-center gap-0.5 text-[11px] font-bold uppercase tracking-wider text-neutral-950 group-hover:text-amber-400 shrink-0"
                     >
                       Inquire
-                      <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                      <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                     </a>
                   </div>
                 </div>
