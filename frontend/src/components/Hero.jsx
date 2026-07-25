@@ -67,7 +67,7 @@ const Hero = () => {
 </p>
 
               <div className="pt-2 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-wider text-white/70">
-                <span>Trusted by:</span>
+                <span>Our Expertise:</span>
                 <div className="flex flex-wrap gap-3">
                   {highlights.map((logo, idx) => (
                     <span key={idx} className="text-white border-b border-white/20 pb-0.5">

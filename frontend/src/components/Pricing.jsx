@@ -62,10 +62,6 @@ const Pricing = () => {
         {/* Header Block */}
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between border-b border-neutral-200 pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-md bg-neutral-100 px-3 py-1 text-xs font-bold uppercase tracking-widest text-neutral-800">
-              <Sparkles className="h-3.5 w-3.5 text-amber-600" />
-              <span>Transparent Rates</span>
-            </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl md:text-5xl">
               PRICING PLANS
             </h2>

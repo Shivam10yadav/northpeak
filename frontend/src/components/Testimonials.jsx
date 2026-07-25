@@ -39,10 +39,7 @@ const Testimonials = () => {
         {/* Header Block */}
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between border-b border-zinc-800 pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-md bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs font-bold uppercase tracking-widest text-zinc-300">
-              <Sparkles className="h-3.5 w-3.5 text-amber-400" />
-              <span>Client Feedback</span>
-            </div>
+       
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
               WHAT CLIENTS SAY
             </h2>

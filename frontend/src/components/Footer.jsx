@@ -38,10 +38,7 @@ const Footer = () => {
         {/* Top CTA Banner */}
         <div className="flex flex-col gap-6 rounded-2xl border border-neutral-200 bg-neutral-50 p-8 md:flex-row md:items-center md:justify-between">
           <div>
-            <div className="inline-flex items-center gap-1.5 rounded-md bg-neutral-200/70 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-widest text-neutral-800">
-              <FaWandMagicSparkles className="h-3 w-3 text-amber-600" />
-              <span>Next Steps</span>
-            </div>
+         
             <h3 className="mt-2 text-2xl font-bold tracking-tight text-neutral-950 sm:text-3xl">
               Have a project in mind?
             </h3>

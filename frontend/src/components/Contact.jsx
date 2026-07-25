@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Sparkles, Send, CheckCircle2, AlertCircle, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Sparkles,
+  Send,
+  CheckCircle2,
+  AlertCircle,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +38,8 @@ const Contact = () => {
     if (!formData.message.trim()) {
       newErrors.message = "Project details are required";
     } else if (formData.message.trim().length < 15) {
-      newErrors.message = "Please describe your project in at least 15 characters";
+      newErrors.message =
+        "Please describe your project in at least 15 characters";
     }
 
     return newErrors;
@@ -66,34 +75,35 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="w-full bg-zinc-950 px-4 py-20 text-white sm:px-8 md:px-12 lg:px-16">
+    <section
+      id="contact"
+      className="w-full bg-zinc-950 px-4 py-20 text-white sm:px-8 md:px-12 lg:px-16"
+    >
       <div className="mx-auto max-w-7xl">
-        
         {/* Header Block */}
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between border-b border-zinc-800 pb-8">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-md bg-zinc-900 border border-zinc-800 px-3 py-1 text-xs font-bold uppercase tracking-widest text-zinc-300">
-              <Sparkles className="h-3.5 w-3.5 text-amber-400" />
-              <span>Let's Connect</span>
-            </div>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
               START A PROJECT
             </h2>
           </div>
 
           <p className="max-w-md text-xs text-zinc-400 sm:text-sm leading-relaxed">
-            Have an idea or need a high-performance web app? Drop your details below and we’ll get back to you within 24 hours.
+            Have an idea or need a high-performance web app? Drop your details
+            below and we’ll get back to you within 24 hours.
           </p>
         </div>
 
         {/* Form & Info Grid */}
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12">
-          
           <div className="space-y-8 lg:col-span-5">
             <div>
-              <h3 className="text-xl font-bold text-white tracking-tight">Got questions?</h3>
+              <h3 className="text-xl font-bold text-white tracking-tight">
+                Got questions?
+              </h3>
               <p className="mt-2 text-xs text-zinc-400 leading-relaxed sm:text-sm">
-                We work with startups, businesses, and agency partners across India and globally.
+                We work with startups, businesses, and agency partners across
+                India and globally.
               </p>
             </div>
 
@@ -103,8 +113,13 @@ const Contact = () => {
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Email Us</p>
-                  <a href="mailto:hello@northpeak.dev" className="text-sm font-medium text-white hover:text-amber-400">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+                    Email Us
+                  </p>
+                  <a
+                    href="mailto:hello@northpeak.dev"
+                    className="text-sm font-medium text-white hover:text-amber-400"
+                  >
                     hello@northpeak.dev
                   </a>
                 </div>
@@ -115,8 +130,12 @@ const Contact = () => {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Call / WhatsApp</p>
-                  <p className="text-sm font-medium text-white">+91 98765 43210</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+                    Call / WhatsApp
+                  </p>
+                  <p className="text-sm font-medium text-white">
+                    +91 98765 43210
+                  </p>
                 </div>
               </div>
 
@@ -125,8 +144,12 @@ const Contact = () => {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">Location</p>
-                  <p className="text-sm font-medium text-white">Haryana, India</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
+                    Location
+                  </p>
+                  <p className="text-sm font-medium text-white">
+                    Haryana, India
+                  </p>
                 </div>
               </div>
             </div>
@@ -141,13 +164,15 @@ const Contact = () => {
 
           <div className="lg:col-span-7">
             <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 sm:p-8 backdrop-blur-sm">
-              
               {isSubmitted ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <CheckCircle2 className="h-14 w-14 text-emerald-400" />
-                  <h3 className="mt-4 text-2xl font-bold text-white">Message Sent!</h3>
+                  <h3 className="mt-4 text-2xl font-bold text-white">
+                    Message Sent!
+                  </h3>
                   <p className="mt-2 max-w-sm text-xs text-zinc-400 sm:text-sm">
-                    Thanks for reaching out! We’ve received your inquiry and will respond to your email within 24 hours.
+                    Thanks for reaching out! We’ve received your inquiry and
+                    will respond to your email within 24 hours.
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
@@ -158,12 +183,15 @@ const Contact = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-                  
                   {/* Name Input */}
                   <div>
-                    <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300">
+                    <label
+                      htmlFor="name"
+                      className="block text-xs font-semibold uppercase tracking-wider text-zinc-300"
+                    >
                       Your Name <span className="text-amber-400">*</span>
                     </label>
+
                     <input
                       type="text"
                       name="name"
@@ -171,7 +199,9 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="e.g. Rahul Verma"
                       className={`mt-2 w-full rounded-xl border bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors ${
-                        errors.name ? "border-red-500/80 focus:border-red-500" : "border-zinc-800 focus:border-amber-400"
+                        errors.name
+                          ? "border-red-500/80 focus:border-red-500"
+                          : "border-zinc-800 focus:border-amber-400"
                       }`}
                     />
                     {errors.name && (
@@ -184,9 +214,13 @@ const Contact = () => {
 
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300">
+                      <label
+                        htmlFor="email"
+                        className="block text-xs font-semibold uppercase tracking-wider text-zinc-300"
+                      >
                         Email Address <span className="text-amber-400">*</span>
                       </label>
+
                       <input
                         type="email"
                         name="email"
@@ -194,7 +228,9 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="rahul@company.com"
                         className={`mt-2 w-full rounded-xl border bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors ${
-                          errors.email ? "border-red-500/80 focus:border-red-500" : "border-zinc-800 focus:border-amber-400"
+                          errors.email
+                            ? "border-red-500/80 focus:border-red-500"
+                            : "border-zinc-800 focus:border-amber-400"
                         }`}
                       />
                       {errors.email && (
@@ -206,17 +242,25 @@ const Contact = () => {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-300">
-                        Estimated Budget
+                      <label
+                        htmlFor="message"
+                        className="block text-xs font-semibold uppercase tracking-wider text-zinc-300"
+                      >
+                        Project Details{" "}
+                        <span className="text-amber-400">*</span>
                       </label>
+
                       <select
+                        id="budget"
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
                         className="mt-2 w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-amber-400"
                       >
                         <option value="₹25k - ₹60k">₹25,000 - ₹60,000</option>
-                        <option value="₹60k - ₹1.2L">₹60,000 - ₹1,20,000</option>
+                        <option value="₹60k - ₹1.2L">
+                          ₹60,000 - ₹1,20,000
+                        </option>
                         <option value="₹1.2L+">₹1,20,000+</option>
                       </select>
                     </div>
@@ -233,7 +277,9 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="Tell us briefly about what you want to build..."
                       className={`mt-2 w-full rounded-xl border bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors ${
-                        errors.message ? "border-red-500/80 focus:border-red-500" : "border-zinc-800 focus:border-amber-400"
+                        errors.message
+                          ? "border-red-500/80 focus:border-red-500"
+                          : "border-zinc-800 focus:border-amber-400"
                       }`}
                     />
                     {errors.message && (
@@ -259,15 +305,11 @@ const Contact = () => {
                       </>
                     )}
                   </button>
-
                 </form>
               )}
-
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );
